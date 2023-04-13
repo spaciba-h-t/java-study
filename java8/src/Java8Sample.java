@@ -1,3 +1,5 @@
+import defaultMethod.DefaultMethod;
+import defaultMethod.DefaultmethodImpl;
 import lambda.Lambda;
 import stream.StreamSample;
 import optional.OptionalSample;
@@ -33,5 +35,10 @@ public class Java8Sample {
         System.out.println(formatter.format(t2));
         ZonedDateTime t3 = now.plusYears(1).minusHours(2); // 1年ごと２時間前
         System.out.println(formatter.format(t3));
+
+        // デフォルトメソッド
+        DefaultmethodImpl defaultMethod = new DefaultmethodImpl();
+        System.out.println(defaultMethod.getMessage());
+
     }
 }
