@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.privatemethod.PrivateMethodImpl;
+
 import java.util.List;
 import java.util.Map;
 
@@ -11,5 +13,9 @@ public class Java9Sample {
         System.out.println(emptyImmutableList);
         Map nonemptyImmutableMap = Map.of(1, "one", 2, "two", 3, "three");
         System.out.println(nonemptyImmutableMap);
+
+        // Interface内のprivateメソッド
+        PrivateMethodImpl privateMethod = new PrivateMethodImpl();
+        privateMethod.printNum();
     }
 }
