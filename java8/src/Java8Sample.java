@@ -3,10 +3,12 @@ import defaultMethod.DefaultmethodImpl;
 import lambda.Lambda;
 import stream.StreamSample;
 import optional.OptionalSample;
+import stream.StreamSample2;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
+import java.util.Arrays;
 import java.util.Optional;
 
 public class Java8Sample {
@@ -17,8 +19,13 @@ public class Java8Sample {
         System.out.println(lambda.getLambdaMessage("ラムダ式動作検証"));
 
         // StreamAPI
+        // 文字列
         StreamSample stream = new StreamSample();
         System.out.println(String.join(",", stream.getTeamName()));
+        // 配列
+        StreamSample2 stream2 = new StreamSample2();
+        System.out.println(Arrays.toString(stream2.getStringArray()));
+        //
 
         // Optional
         OptionalSample optionalSample = new OptionalSample();
